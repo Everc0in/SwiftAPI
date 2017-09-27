@@ -68,7 +68,7 @@ class EvercoinAPITests: XCTestCase {
         if priceResponse.isSuccess == true{
             let orderResponse = evercoin.createOrder(priceResponse: priceResponse, refundAddress: refundAddress, destinationAddress: destinationAddress)
             if orderResponse.isSuccess == true {
-                print("You should deposit to this address: " + (orderResponse.depositAddress?.mainAddress)!)
+                EvercoinAPI.logToConsole(msg: "You should deposit to this address: " + (orderResponse.depositAddress?.mainAddress)!)
                 while(true){
                     sleep(10)
                     let statusResponse:StatusResponse = evercoin.getStatus(orderId: orderResponse.orderId!)
