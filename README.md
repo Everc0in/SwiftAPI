@@ -21,8 +21,9 @@ class EvercoinAPITests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        let defaults = UserDefaults.standard
-        defaults.set("https://test.evercoin.com/", forKey: "evercoin.api.endpoint")
+        // Make sure to use test endpoint during development and testing.
+        //let defaults = UserDefaults.standard
+        //defaults.set("https://test.evercoin.com/", forKey: "evercoin.api.endpoint")
     }
     
     override func tearDown() {
@@ -31,7 +32,7 @@ class EvercoinAPITests: XCTestCase {
     }
     
     func testExample() {
-        let API_KEY:String = "7f878074f09f4f673554f30be51b6a0d";
+        let API_KEY:String = "Your API Key"; // contact support@evercoin.com to obtain yours
         let version:String = "v1";
         let deposit:String = "BTC";
         let destination:String = "ETH";
