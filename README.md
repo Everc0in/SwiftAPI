@@ -103,7 +103,7 @@ class EvercoinAPITests: XCTestCase {
 ```
 ## More Info
 
-More information and API documentation can be found at https://evercoin.com/API/
+More information and API documentation can be found at https://evercoin.com/api/
 
 ## Getting help
 
