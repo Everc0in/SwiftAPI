@@ -8,7 +8,7 @@
 
 ## Download
 
-Download a version of the Evercoin swift's framework from [SwiftAPI](https://github.com/Everc0in/Download/raw/master/EvercoinAPI.framework) 
+Download a version of the Evercoin swift's framework from [SwiftAPI](https://github.com/Everc0in/Download/tree/master/EvercoinAPI.framework) 
 
 ## Usage Example
 ```swift
