@@ -76,14 +76,14 @@ class EvercoinAPITests: XCTestCase {
                         let depositMainAddress = orderResponse.depositAddress?.mainAddress
                         var printStr = "Send " + depositAmount + " "
                         printStr = printStr +  deposit + " to the " + depositMainAddress!
-                        print(printStr)
+                        EvercoinAPI.logToConsole(msg: printStr)
                     }
                     else if (statusResponse.exchangeStatus?.statusId == Status.awaitingConfirm.statusId) {
-                        print("Looks like you sent " + deposit + ". Waiting for confirmation on the blockchain.");
+                        EvercoinAPI.logToConsole(msg: "Looks like you sent " + deposit + ". Waiting for confirmation on the blockchain.");
                     } else if (statusResponse.exchangeStatus?.statusId == Status.awaitingExchange.statusId) {
-                        print("Your " + destination + " is on the way.");
+                        EvercoinAPI.logToConsole(msg:"Your " + destination + " is on the way.");
                     } else if (statusResponse.exchangeStatus?.statusId == Status.allDone.statusId) {
-                        print("Success! Enjoy your " + destination);
+                        EvercoinAPI.logToConsole(msg:"Success! Enjoy your " + destination);
                         return;
                     }
                 }
