@@ -45,11 +45,11 @@ class EvercoinAPITests: XCTestCase {
         let depositCoin = coins.getCoin(symbol: deposit);
         let destinationCoin = coins.getCoin(symbol: destination);
         if (depositCoin != nil && !(depositCoin?.fromAvailable)!) {
-            //Exchanging from BTC is currently available.
+            //Exchanging from BTC is not currently available.
             return;
         }
         if (destinationCoin != nil && !(destinationCoin?.toAvailable)!) {
-            //Exchanging to ETH is currently available.
+            //Exchanging to ETH is not currently available.
             return;
         }
         let refundValidateReponse = evercoin.validateAddress(coin: deposit, address: refundMainAddress)
